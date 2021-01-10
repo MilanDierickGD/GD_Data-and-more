@@ -35,6 +35,7 @@ auto read(std::ifstream& is, Pod& pod) -> std::enable_if_t<std::is_pod_v<Pod>>
 	is.read((char*)&pod, sizeof(pod));
 }
 
+HEADER_INLINE
 void read(std::ifstream& is, std::string& str)
 {
 	decltype(size(str)) len;

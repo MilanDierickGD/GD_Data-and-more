@@ -35,6 +35,7 @@ auto write(std::ofstream& os, Pod const& pod) -> std::enable_if_t<std::is_pod_v<
 	os.write((char*)&pod, sizeof(pod));
 }
 
+HEADER_INLINE
 void write(std::ofstream& os, std::string const& str)
 {
 	write(os, size(str));
